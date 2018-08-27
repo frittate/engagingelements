@@ -1,0 +1,30 @@
+.section-xteaser {
+    padding-bottom: 3rem;
+}
+
+.teaser-box {
+    text-align: center;
+    background-color: $grey-light;
+    padding-bottom: 1rem;
+    width: 80%;
+    margin-left: 10%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    img {
+        height: 8rem;
+        transform: scale(0.7); }
+
+    figure {
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid rgb(83, 156, 207);
+        padding: 1rem;
+        transform: translateY(-50%);
+    }
+}
+
+.img-box {
+    display: inline-block;
+    height: 0;
+}

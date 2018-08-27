@@ -1,0 +1,136 @@
+$orange: #D84315;
+$grey-dark: #2d2d2d;
+$grey-light: #f4f4f4;
+$white: #ffffff;
+$bg-grey: rgba(236,237,245,0.94);
+
+@import 'xteaser';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+}
+
+.col {
+    margin-bottom: 3rem;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    background: url("./img/hero-bg.jpg") no-repeat left top;
+}
+
+.hero-wrapper {
+    background-color: $bg-grey;
+}
+
+.hero {
+    height: 100vh;
+    width: 810px;
+    margin: 0 auto;
+    padding-top: 162px;
+    border-left: 1px solid $white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 12rem 12rem;
+    grid-gap: 1px 1px;
+    grid-template-areas: "hero-h1 ." "hero-subhead hero-button";
+  }
+  
+.hero-h1 { 
+    grid-area: hero-h1; 
+}
+
+.hero-button { 
+    grid-area: hero-button; 
+    align-self: end;
+
+    & a {
+        color: $orange;
+        display: inline-block;
+        width: 17.5rem;
+        background-color: $white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 5.2rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    & i {
+        padding-left: 1rem;
+        color: $orange;
+    }
+}
+
+.hero-h1 h1 {
+    font-weight: 900;
+    font-size: 3.6rem;
+    display: block;
+    width: 340px;
+    line-height: 3.8rem;
+    color: $grey-dark;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        bottom: -18px;
+        position: absolute;
+        height: 3px;
+        width: 17.5rem;
+        background-color: $orange;
+
+    }
+
+}
+
+.hero-subhead {
+    grid-area: hero-subhead; 
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $grey-dark;
+    font-weight: 300;
+    align-self: end;
+
+}
+
+.hero-subhead_bold {
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    height: 6.5rem;
+    padding-left: 11px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.nav-link {
+    font-size: 1.4rem;
+    color: #616161;
+    text-transform: uppercase;
+    text-decoration: none;
+}
