@@ -40,7 +40,8 @@ html {
 }
 
 main {
-    background: url("./img/hero-bg.jpg") no-repeat left top;
+    /* background: url("./img/hero-bg.jpg") no-repeat left top; */
+    background: $bg-grey;
 }
 
 .hero-wrapper {
@@ -49,24 +50,27 @@ main {
 
 
 .hero {
-    height: 100vh;
+    height: 50vh;
     width: 810px;
     margin: 0 auto;
     padding-top: 162px;
     border-left: 1px solid $white;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  /*   grid-template-columns: repeat(2, 50%);
     grid-template-rows: 12rem 12rem;
     grid-gap: 1px 1px;
-    grid-template-areas: "hero-h1 ." "hero-subhead hero-button";
+    grid-template-areas: "hero-h1 ." "hero-subhead hero-button"; */
   }
   
 .hero-h1 { 
-    grid-area: hero-h1; 
+    /* grid-area: hero-h1;  */
+    flex-basis: 100%;
 }
 
 .hero-button { 
-    grid-area: hero-button; 
+    /* grid-area: hero-button;  */
     align-self: end;
 
     & a {
@@ -119,12 +123,13 @@ main {
 }
 
 .hero-subhead {
-    grid-area: hero-subhead; 
+   /*  grid-area: hero-subhead;  */
     font-size: 1.8rem;
     line-height: 150%;
     color: $grey-dark;
     font-weight: 300;
     align-self: end;
+    flex-basis: 50%;
 
 }
 

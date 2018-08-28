@@ -59,7 +59,8 @@ html {
 }
 
 main {
-  background: url("./img/hero-bg.jpg") no-repeat left top;
+  /* background: url("./img/hero-bg.jpg") no-repeat left top; */
+  background: rgba(236, 237, 245, 0.94);
 }
 
 .hero-wrapper {
@@ -67,31 +68,34 @@ main {
 }
 
 .hero {
-  height: 100vh;
+  height: 50vh;
   width: 810px;
   margin: 0 auto;
   padding-top: 162px;
   border-left: 1px solid #ffffff;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
-  -ms-grid-rows: 12rem 12rem;
-      grid-template-rows: 12rem 12rem;
-  grid-gap: 1px 1px;
-      grid-template-areas: "hero-h1 ." "hero-subhead hero-button";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*   grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 12rem 12rem;
+    grid-gap: 1px 1px;
+    grid-template-areas: "hero-h1 ." "hero-subhead hero-button"; */
 }
 
 .hero-h1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: hero-h1;
+  /* grid-area: hero-h1;  */
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .hero-button {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: hero-button;
+  /* grid-area: hero-button;  */
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
@@ -141,9 +145,7 @@ main {
 }
 
 .hero-subhead {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: hero-subhead;
+  /*  grid-area: hero-subhead;  */
   font-size: 1.8rem;
   line-height: 150%;
   color: #2d2d2d;
@@ -151,6 +153,8 @@ main {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .hero-subhead_bold {
