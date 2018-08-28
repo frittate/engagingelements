@@ -32,38 +32,18 @@
   height: 0;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.content-particles {
+  height: 200px;
+  width: 100%;
 }
 
-.bg-img {
-  z-index: 1;
+#particles-js {
   position: absolute;
-  background: url(/resources/css/img/hero-bg.jpg);
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-}
-
-.col {
-  margin-bottom: 3rem;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: 'Rubik', sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-body {
-  background: rgba(236, 237, 245, 0.94);
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 
 .grid {
@@ -115,6 +95,40 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   grid-area: grid-4;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-img {
+  z-index: 1;
+  position: absolute;
+  background: url(/resources/css/img/hero-bg.jpg);
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.col {
+  margin-bottom: 3rem;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Rubik', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+body {
+  background: rgba(236, 237, 245, 0.94);
 }
 
 .hero {
@@ -262,7 +276,6 @@ nav {
 .content {
   width: 70%;
   margin: 0 auto;
-  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,19 +333,23 @@ nav {
   width: 35rem;
 }
 
-.content-2 {
-  height: 200px;
-  width: 100%;
+.box-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  background-color: #D84315;
-  background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+.box-wrapper > .content_box {
+  height: 12rem;
+  width: 12rem;
+  background-color: rgba(216, 67, 21, 0.15);
+  padding-right: 12rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -4,13 +4,16 @@ $grey-light: #f4f4f4;
 $white: #ffffff;
 $bg-grey: rgba(236,237,245,0.94);
 
-@import 'xteaser';
-
 $left-spacer: 15%;
 $right-spacer: 15%;
 
 $space-m: 3.8rem;
 $space-l: 5.2rem;
+
+@import 'xteaser';
+@import 'particles';
+@import 'grid';
+
 
 * {
     box-sizing: border-box;
@@ -53,45 +56,7 @@ body {
     background: $bg-grey;
 }
 
-.grid {
-    display: grid;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: $left-spacer 1fr 1fr 1fr 1fr $right-spacer;
-    grid-template-rows: 1fr;
-    grid-gap: 0px 0px;
-    grid-template-areas: ". grid-1 grid-2 grid-3 grid-4 .";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    pointer-events: none;
-}
 
-.grid > * {
-    border-left: 2px solid $grey-light;
-}
-
-.grid :last-child {
-    border-right: 2px solid $grey-light;
-}
-
-.grid-1 {
-    grid-area: grid-1;
-}
-
-.grid-2 {
-    grid-area: grid-2;
-}
-
-.grid-3 {
-    grid-area: grid-3;
-}
-
-.grid-4 {
-    grid-area: grid-4;
-}
 
 .hero {
     z-index: 3;
@@ -220,10 +185,8 @@ nav {
 .content {
     width: 100% - $left-spacer - $right-spacer;
     margin: 0 auto;
-    height: 50vh;
     display: flex;
     padding-top: $space-l;
-
 
     & h2 {
         font-size: 3.2rem;
@@ -276,18 +239,17 @@ nav {
 
 }
 
-.content-2 {
-    height: 200px;
-    width: 100%;
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    justify-content: space-between;
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    background-color: $orange;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-  }
+.box-wrapper > .content_box {
+    
+    height: 12rem;
+    width: 12rem;
+    background-color: rgba($orange, 0.15);
+    padding-right: 12rem;
+}
