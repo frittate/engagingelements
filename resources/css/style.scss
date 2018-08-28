@@ -55,7 +55,7 @@ main {
     padding-top: 162px;
     border-left: 1px solid $white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: 12rem 12rem;
     grid-gap: 1px 1px;
     grid-template-areas: "hero-h1 ." "hero-subhead hero-button";
@@ -81,16 +81,17 @@ main {
         text-decoration: none;
         transition: all 0.5s ease;
 
-        &:hover {
+         &:hover {
             background-color: $orange;
             color: $white;
-        }
+        } 
+
+      
     }
 
     & i {
         padding-left: 1rem;
-        color: $orange;
-    }
+    } 
 
 
 }
@@ -141,6 +142,7 @@ nav {
     padding-left: 11px;
     width: 80vw;
     margin: 0 auto;
+    transition: all 0.5s ease-in;
 }
 
 .nav-link {
@@ -148,10 +150,21 @@ nav {
     color: #616161;
     text-transform: uppercase;
     text-decoration: none;
+    display: block;
+    line-height: 6.5rem;
+    width: 10%;
+    text-align: center;
     
     &:hover {
-        color: $orange;
-        text-decoration: underline solid $orange;
+       border-bottom: 3px solid $orange;
+       font-weight: 500;
     }
 
+}
+
+.content-1 {
+    width: 81rem;
+    margin: 0 auto;
+    height: 50vh;
+    background-color: $bg-grey;
 }

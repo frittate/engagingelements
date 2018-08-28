@@ -74,8 +74,8 @@ main {
   border-left: 1px solid #ffffff;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: (50%)[2];
+      grid-template-columns: repeat(2, 50%);
   -ms-grid-rows: 12rem 12rem;
       grid-template-rows: 12rem 12rem;
   grid-gap: 1px 1px;
@@ -118,7 +118,6 @@ main {
 
 .hero-button i {
   padding-left: 1rem;
-  color: #D84315;
 }
 
 .hero-h1 h1 {
@@ -176,6 +175,8 @@ nav {
   padding-left: 11px;
   width: 80vw;
   margin: 0 auto;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .nav-link {
@@ -183,11 +184,21 @@ nav {
   color: #616161;
   text-transform: uppercase;
   text-decoration: none;
+  display: block;
+  line-height: 6.5rem;
+  width: 10%;
+  text-align: center;
 }
 
 .nav-link:hover {
-  color: #D84315;
-  -webkit-text-decoration: underline solid #D84315;
-          text-decoration: underline solid #D84315;
+  border-bottom: 3px solid #D84315;
+  font-weight: 500;
+}
+
+.content-1 {
+  width: 81rem;
+  margin: 0 auto;
+  height: 50vh;
+  background-color: rgba(236, 237, 245, 0.94);
 }
 /*# sourceMappingURL=style.css.map */
