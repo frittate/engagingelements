@@ -2,18 +2,22 @@ $orange: #D84315;
 $grey-dark: #2d2d2d;
 $grey-light: #f4f4f4;
 $white: #ffffff;
-$bg-grey: rgba(236,237,245,0.94);
+$bg-grey-opaque: rgb(236,237,245);
+$bg-grey: rgba($bg-grey-opaque,0.94);
+
 
 $left-spacer: 15%;
 $right-spacer: 15%;
 
+$space-s: 2rem;
 $space-m: 3.8rem;
 $space-l: 5.2rem;
 
 @import 'xteaser';
 @import 'particles';
 @import 'grid';
-
+@import 'content';
+@import 'interhead';
 
 * {
     box-sizing: border-box;
@@ -24,13 +28,7 @@ $space-l: 5.2rem;
 }
 
 
-@media screen and (min-width: 600px) {
 
-}
-
-@media screen and (min-width: 320px) and (max-width: 600px) {
-
-}
 
 .bg-img {
     z-index: 1;
@@ -175,81 +173,4 @@ nav {
        font-weight: 500;
     }
 
-}
-
-.content-wrapper {
-    position: relative;
-    z-index: 3;
-}
-
-.content {
-    width: 100% - $left-spacer - $right-spacer;
-    margin: 0 auto;
-    display: flex;
-    padding-top: $space-l;
-
-    & h2 {
-        font-size: 3.2rem;
-        color: #D84315;
-        font-weight: 900;
-        display: inline-block;
-        width: 29rem;
-        flex-basis: 50%;
-
-        &::after {
-            content: '';
-            position: relative;
-            bottom: -20px;
-            display: block;           
-            height: 10px;
-            width: 17.5rem;
-            background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIUlEQVQYV2O84Sz6n4GBgUFj72tGEM2IIQASRQZgZcgAAKvtCAUJeeitAAAAAElFTkSuQmCC);
-        }
-    }
-
-    &_1 {
-        flex-basis: 50%;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        padding-bottom: $space-m;
-
-        &::after {
-            content: '';
-            position: relative;
-            bottom: -10px;
-            display: block;           
-            height: 2px;
-            width: 8rem;
-            background: $white;
-        }
-    }
-
-    p {
-        font-size: 1.5rem;
-        font-weight: 300;
-        line-height: 150%;
-        padding-bottom: $space-l;
-        display: inline-block;
-        width: 35rem;
-    }
-
-}
-
-.box-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 50%;
-    justify-content: space-between;
-}
-
-.box-wrapper > .content_box {
-    
-    height: 12rem;
-    width: 12rem;
-    background-color: rgba($orange, 0.15);
-    padding-right: 12rem;
 }
