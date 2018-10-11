@@ -1,10 +1,6 @@
 /* --- default nicht größenabhängig--- */
     header {
         box-shadow: 0 1px 2px rgba(0,0,0,0.25);
-        position: fixed;
-        z-index: 4;
-        left: 0;
-        right: 0;
         background: $white;
     }
 
@@ -16,7 +12,7 @@
 
 
 /* --- smartphone and small tablet screens --- */
-@media screen and (min-width: 320px) and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 720px) {
     .contact {
         display: none;
     }
@@ -54,7 +50,7 @@
 }
 
 /* --- large screens --- */
-@media screen and (min-width: 601px) { 
+@media screen and (min-width:721px) { 
     nav {
         display: flex;
         flex-direction: row;
@@ -78,7 +74,7 @@
 
     .contact {
         height: 2.6rem;
-        background-color: $orange;
+        background-color: $main-color;
         display: flex;
         align-items: center;
         color: $white;
@@ -101,7 +97,7 @@
         text-align: center;
         
         &:hover {
-           border-bottom: 3px solid $orange;
+           border-bottom: 3px solid $main-color;
            font-weight: 500;
         }
     }
