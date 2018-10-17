@@ -37,7 +37,7 @@ $space-l: 5.2rem;
 @import 'particles';
 
 @import 'typography';
-@import 'site-forms';
+@import 'siteforms';
 
 * {
     box-sizing: border-box;
@@ -128,11 +128,8 @@ body {
         position: relative;
         overflow: hidden;
         display: inline-block;
+        margin: 0;
         
-
-        & figure {
-            margin: 0;
-        }
 
         & a {
             display: block;
@@ -166,12 +163,12 @@ body {
         position: relative; 
         padding-left: 8rem;
         padding-right: 2rem;
+        height: 100%;
     }
 
     & .icon-box-mover {
         position: absolute;
         width: 60px;
-        height: 100%;
         text-align: center;
         background: $main-color;
         left: 0;
@@ -181,11 +178,31 @@ body {
         color: $white;
 
         & i {
-            line-height: 60px;
+            
+            //line-height: 60px;
             font-size: 2rem;
         }
     }
 }
+
+.section-social {
+    background-color: $main-color;
+}
+
+.section-trainer {
+    & img {
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        max-width: 100%;
+    }
+}
+
+.section-testimonial {
+    background-color: $grey-light;
+}
+
+
 
 
 
