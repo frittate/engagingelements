@@ -131,11 +131,14 @@ $spacers: () !default;
 $spacers: map-merge(
   (
     0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    25: ($spacer * .25),
+    50: ($spacer * .5),
+    100: $spacer,
+    150: ($spacer * 1.5),
+    300: ($spacer * 3),
+    500: ($spacer * 5),
+    750: ($spacer * 7.5),
+    1000: ($spacer * 10)
   ),
   $spacers
 );
