@@ -1,0 +1,6 @@
+unteres formular
+-> JS fängt "Anfrage senden" ab, verhindert neuladen
+-> validiert die Infos
+-> AJAX-Call
+-> JSON-Format für das Senden der Infos
+-> PHP-Skript validiert und sendet, wenn ohne Fehler
