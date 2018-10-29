@@ -19,39 +19,75 @@
     &_lower {
         padding: 3rem;
 
-        & .form-control-btn {
-            display: block;
-            width: 100%;
-            background-color: $main-color;
-            height: 4.8rem;
-            border: none;
-            font-weight: 600;
-            transition: all 0.5s ease;
-            cursor: pointer;
-            margin-top: 3rem;
+    }
+}
 
-            &:hover {
-                background-color: lighten($main-color, 20%);
-            }
+
+.section-contact form,
+.section-offer form {
+    font-size: 1.4rem;
+    border-radius: 2px;
+    & .form-control {
+        height: 3rem;
+        font-size: 1.3rem;
+    
+        &::placeholder {
+            color: $grey-medium;
         }
     }
-}
+    
+    & .form-group {
+        position: relative;
+        color: $main-color;
 
-.form-group {
-    & label {
-        display: inline-block;
-        color: lighten($main-color,20%);
-        margin: 0.5rem 0 1rem 0;
+        & input[type=text],
+        & input[type=email],
+        & input[type=tel],
+        & textarea {
+            padding: 3rem 1rem;
+            border: none;
+            background: $grey-light;
+
+            &::placeholder {
+                color: transparent;
+            }
+            
+        }
+
+        & label {
+            padding-left: 1rem;
+            position: absolute;
+            top: 2rem;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+        }
     }
-}
 
-.form-control {
-    height: 3rem;
-    font-size: 1.3rem;
-
-    &::placeholder {
-        color: $grey-medium;
+    input[type=text]:required input[type=text]:valid,
+    input[type=text]:required input[type=email]:valid, {
+        background: lightgreen;
     }
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+       transform: translateY(-120%); 
+    } 
+
+    & button {
+        display: block;
+        width: 100%;
+        background-color: $main-color;
+        height: 4.8rem;
+        border: none;
+        font-weight: 600;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        margin-top: 1rem;
+
+        &:hover {
+            background-color: lighten($main-color, 20%);
+        }
+    }
+
 }
 
 

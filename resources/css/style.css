@@ -6667,13 +6667,24 @@ h1 {
 }
 
 h2 {
-  font-size: 3.2rem;
   color: #1886b9;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 3.2rem;
+  }
 }
 
 .h2-thin {
   color: #c4c4c4;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-weight: 300;
 }
 
@@ -6726,7 +6737,130 @@ p {
   padding: 3rem;
 }
 
-.form-request_lower .form-control-btn {
+.section-contact form,
+.section-offer form {
+  font-size: 1.4rem;
+  border-radius: 2px;
+}
+
+.section-contact form .form-control,
+.section-offer form .form-control {
+  height: 3rem;
+  font-size: 1.3rem;
+}
+
+.section-contact form .form-control::-webkit-input-placeholder,
+.section-offer form .form-control::-webkit-input-placeholder {
+  color: #c4c4c4;
+}
+
+.section-contact form .form-control:-ms-input-placeholder,
+.section-offer form .form-control:-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.section-contact form .form-control::-ms-input-placeholder,
+.section-offer form .form-control::-ms-input-placeholder {
+  color: #c4c4c4;
+}
+
+.section-contact form .form-control::placeholder,
+.section-offer form .form-control::placeholder {
+  color: #c4c4c4;
+}
+
+.section-contact form .form-group,
+.section-offer form .form-group {
+  position: relative;
+  color: #1886b9;
+}
+
+.section-contact form .form-group input[type=text],
+.section-contact form .form-group input[type=email],
+.section-contact form .form-group input[type=tel],
+.section-contact form .form-group textarea,
+.section-offer form .form-group input[type=text],
+.section-offer form .form-group input[type=email],
+.section-offer form .form-group input[type=tel],
+.section-offer form .form-group textarea {
+  padding: 3rem 1rem;
+  border: none;
+  background: #f4f4f4;
+}
+
+.section-contact form .form-group input[type=text]::-webkit-input-placeholder,
+.section-contact form .form-group input[type=email]::-webkit-input-placeholder,
+.section-contact form .form-group input[type=tel]::-webkit-input-placeholder,
+.section-contact form .form-group textarea::-webkit-input-placeholder,
+.section-offer form .form-group input[type=text]::-webkit-input-placeholder,
+.section-offer form .form-group input[type=email]::-webkit-input-placeholder,
+.section-offer form .form-group input[type=tel]::-webkit-input-placeholder,
+.section-offer form .form-group textarea::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.section-contact form .form-group input[type=text]:-ms-input-placeholder,
+.section-contact form .form-group input[type=email]:-ms-input-placeholder,
+.section-contact form .form-group input[type=tel]:-ms-input-placeholder,
+.section-contact form .form-group textarea:-ms-input-placeholder,
+.section-offer form .form-group input[type=text]:-ms-input-placeholder,
+.section-offer form .form-group input[type=email]:-ms-input-placeholder,
+.section-offer form .form-group input[type=tel]:-ms-input-placeholder,
+.section-offer form .form-group textarea:-ms-input-placeholder {
+  color: transparent;
+}
+
+.section-contact form .form-group input[type=text]::-ms-input-placeholder,
+.section-contact form .form-group input[type=email]::-ms-input-placeholder,
+.section-contact form .form-group input[type=tel]::-ms-input-placeholder,
+.section-contact form .form-group textarea::-ms-input-placeholder,
+.section-offer form .form-group input[type=text]::-ms-input-placeholder,
+.section-offer form .form-group input[type=email]::-ms-input-placeholder,
+.section-offer form .form-group input[type=tel]::-ms-input-placeholder,
+.section-offer form .form-group textarea::-ms-input-placeholder {
+  color: transparent;
+}
+
+.section-contact form .form-group input[type=text]::placeholder,
+.section-contact form .form-group input[type=email]::placeholder,
+.section-contact form .form-group input[type=tel]::placeholder,
+.section-contact form .form-group textarea::placeholder,
+.section-offer form .form-group input[type=text]::placeholder,
+.section-offer form .form-group input[type=email]::placeholder,
+.section-offer form .form-group input[type=tel]::placeholder,
+.section-offer form .form-group textarea::placeholder {
+  color: transparent;
+}
+
+.section-contact form .form-group label,
+.section-offer form .form-group label {
+  padding-left: 1rem;
+  position: absolute;
+  top: 2rem;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.section-contact form input[type=text]:required input[type=text]:valid,
+.section-contact form input[type=text]:required input[type=email]:valid,
+.section-offer form input[type=text]:required input[type=text]:valid,
+.section-offer form input[type=text]:required input[type=email]:valid {
+  background: lightgreen;
+}
+
+.section-contact form input:focus + label,
+.section-contact form input:not(:placeholder-shown) + label,
+.section-offer form input:focus + label,
+.section-offer form input:not(:placeholder-shown) + label {
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+}
+
+.section-contact form button,
+.section-offer form button {
   display: block;
   width: 100%;
   background-color: #1886b9;
@@ -6736,38 +6870,38 @@ p {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
-.form-request_lower .form-control-btn:hover {
+.section-contact form button:hover,
+.section-offer form button:hover {
   background-color: #4fb8e8;
 }
 
-.form-group label {
-  display: inline-block;
-  color: #4fb8e8;
-  margin: 0.5rem 0 1rem 0;
+.system-content {
+  background-color: #f4f4f4;
 }
 
-.form-control {
-  height: 3rem;
-  font-size: 1.3rem;
+.system-content .row > :not(:first-child) {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
-.form-control::-webkit-input-placeholder {
-  color: #c4c4c4;
+.system-content .row > :not(:first-child) p {
+  display: none;
 }
 
-.form-control:-ms-input-placeholder {
-  color: #c4c4c4;
+.system-content .row > :not(:first-child):hover {
+  background-color: #1886b9;
 }
 
-.form-control::-ms-input-placeholder {
-  color: #c4c4c4;
+.system-content .row > :not(:first-child):hover h4 {
+  color: #ffffff;
 }
 
-.form-control::placeholder {
-  color: #c4c4c4;
+.system-content .row > :not(:first-child):hover p {
+  color: #ffffff;
+  display: inline;
 }
 
 * {
@@ -6781,14 +6915,6 @@ p {
 
 body {
   background: #ffffff;
-}
-
-.site-content {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.system-content {
-  background-color: #f4f4f4;
 }
 
 .wrapper-1140 {
@@ -6927,5 +7053,57 @@ body {
 
 .section-testimonial {
   background-color: #f4f4f4;
+}
+
+.section-contact .ansprechpartner {
+  background-color: #f4f4f4;
+}
+
+.section-contact .ansprechpartner-single {
+  background-color: #ffffff;
+}
+
+.section-contact .ansprechpartner-single img {
+  float: left;
+  max-width: 25%;
+  overflow: hidden;
+}
+
+.section-contact .ansprechpartner-single .text-blue {
+  color: #1886b9;
+  font-weight: 400;
+}
+
+.section-footer {
+  background-color: #2d2d2d;
+  color: #f4f4f4;
+}
+
+.section-footer p {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+.section-footer a {
+  display: inline-block;
+  width: 100%;
+  height: 2.5rem;
+  color: #c0e5f7;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.section-footer .media img {
+  max-width: 80%;
+}
+
+.section-footer .media p {
+  line-height: 140%;
+}
+
+.section-footer .footer-secondary {
+  background-color: black;
+  height: 4rem;
+  color: #c4c4c4;
 }
 /*# sourceMappingURL=style.css.map */

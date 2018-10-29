@@ -61,7 +61,7 @@
             </div>
           </div>
 
-          <div class="container">
+          <section class="container section-offer">
           <div class="row mb-750">
             <div class="col-sm-8">
               <div>
@@ -106,24 +106,30 @@
                   </div>
                   <div class="form-request form-request_lower">
                     <form action="">
-                      <div class="form-group">
-                          <label for="form-request_field-name">Ihr Name*</label>
-                          <input type="text" class="form-control text-italic" id="form-request_field-name" aria-describedby="nameHelp" placeholder="E-Mail-Adresse" required>
-                      </div>
-                      
-                      <div class="form-group">
+                      <div class="form-group mb-300">
+                          <input type="text" class="form-control" id="form-request_field-name" aria-describedby="nameHelp" placeholder="Ihr Name" required>
+                          <label for="form-request_field-name">Ihr Name</label>
+                        </div>
+
+                      <div class="form-group mb-300">
+                          <input type="email" class="form-control" id="form-request_field-mail" aria-describedby="mailHelp" placeholder="E-Mail" required>
+                          <label for="form-request_field-mail">Ihre E-Mail</label>
+                        </div>
+                                            
+                      <div class="form-group mb-300">
+                        <input type="text" class="form-control" id="form-request_field-firma" aria-describedby="companyHelp" placeholder="Firmenname">
                         <label for="form-request_field-tel">Ihre Firma</label>
-                        <input type="text" class="form-control text-italic" id="form-request_field-firma" aria-describedby="companyHelp" placeholder="Firmenname">
+                      </div>
+
+                      <div class="form-group mb-300">
+                          <input type="tel" class="form-control" id="form-request_field-tel" aria-describedby="telHelp" placeholder="Telefonnummer">
+                          <label for="form-request_field-tel">Ihre Telefonnummer</label>
                       </div>
 
                       <div class="form-group">
-                          <label for="form-request_field-mail">Ihre E-Mail*</label>
-                          <input class="form-control text-italic" id="form-request_field-mail" aria-describedby="mailHelp" placeholder="E-Mail" required>
-                      </div>
-  
-                      <div class="form-group">
-                          <label for="form-request_field-tel">Ihre Telefonnummer</label>
-                          <input type="tel" class="form-control text-italic" id="form-request_field-tel" aria-describedby="telHelp" placeholder="Telefonnummer">
+                        <input type="checkbox" name="DSGVO" id="form-request_dsgvo" required>
+                        <label for="form-request_dsgvo"></label>
+                        <a href="">Ich stimme den Datenschutzbestimmungen zu.</a>
                       </div>
 
                       <button type="submit" class="form-control-btn text-white text-uppercase">Anfrage senden</button>
@@ -132,9 +138,9 @@
                   </div>
               </div>
           </div>
-      </div>
+          </section>
 
-      <div class="container-fluid system-content">
+      <section class="container-fluid system-content">
           <div class="row wrapper-1140 mx-auto mb-500 system-row">
             <div class="col-sm pt-750 pb-750 ">
                 <div>
@@ -149,6 +155,7 @@
                     <object data="resources/img/SVG/icon-story.svg" type="image/svg+xml" class="mb-100 svg-icon" alt="" width="65px" height="65px">
                     </object>
                     <h4>Storytelling</h4>
+                    <p>Now you see me</p>
                 </div> 
             </div>
 
@@ -157,7 +164,8 @@
                     <object data="resources/img/SVG/icon-expert.svg" type="image/svg+xml" class="mb-100" alt="" width="65px" height="65px">
                     </object>
                     <h4>Expertise</h4>
-                </div> 
+                    <p>Now you see me</p>
+                  </div>
             </div>
 
             <div class="col-sm pt-500 pb-500 ">
@@ -165,12 +173,13 @@
                   <object data="resources/img/SVG/icon-vis.svg" type="image/svg+xml" class="mb-100" alt="" width="65px" height="65px">
                 </object>
                     <h4>Visualisierung</h4>
+                    <p>Now you see me</p>
                 </div> 
             </div>
         </div>  
-      </div>
+      </section>
 
-      <div class="container section-vorteile">
+      <section class="container section-vorteile">
         <div class="row">
           <div class="col-sm">
               <div>
@@ -236,9 +245,9 @@
             </figure>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="container-fluid section-social pt-500 pb-500">
+      <section class="container-fluid section-social pt-500 pb-500">
         <div class="row wrapper-1140 mx-auto">
           <div class="col-sm">
             <h2>social media</h2>
@@ -249,7 +258,7 @@
             <a href="www.linkedin.com">Linkedin</a>
           </div>
         </div>
-      </div>
+      </section>
 
       <div class="container section-trainer">
         <div class="row pt-500 pb-500">
@@ -273,75 +282,64 @@
               <img src="" alt="">
           </div>
           <div class="col-sm">
-            <h2>Logos oder Testimonial</h2>
+              <img src="" alt="">
           </div>
         </div>
 
-        <div class="row pt-500 pb-500">
+        <section class="row pt-500 pb-500 section-contact">
           <div class="col-sm-8">
-            <p class="h2-thin text-uppercase mb-100">Ihr Vorteil</p>
-            <h2 class="mb-500">Kontaktieren Sie uns für ein Erstgespräch</h2>
-            <form action=""></form>
+            <p class="h2-thin text-uppercase mb-100">Ihre Anfrage</p>
+            <form action="">
             <div class="row">
-                
 
-                
-                
-                  <div class="form-group col-sm">
-                      <label for="form-request_field-name"></label>
+                  <div class="form-group col-sm mb-300">
                       <input type="text" class="form-control text-italic" id="form-request_field-name" aria-describedby="nameHelp" placeholder="Ihr Name" required>
+                      <label for="form-request_field-name">Name</label>
                   </div>
 
                   <div class="form-group col-sm">
-                      <label for="form-request_field-name"></label>
-                      <input type="text" class="form-control text-italic" id="form-request_field-name" aria-describedby="mailHelp" placeholder="Ihre E-Mail" required>
+                      <input type="email" class="form-control text-italic" id="form-request_field-name" aria-describedby="mailHelp" placeholder="Ihre Email" required>
+                      <label for="form-request_field-name">Ihre Email</label>
                   </div>
 
                   <div class="form-group col-sm-12">
-                      <label for="form-request_field-name"></label>
-                      <input type="text" class="form-control text-italic" id="form-request_field-name" aria-describedby="nameHelp" placeholder="Ihre Nachricht" required>
+                      <textarea class="form-control text-italic" id="form-request_field-name" aria-describedby="textHelp"></textarea>
+                      <label for="form-request_field-name">Ihre Nachricht</label>
                   </div>
-                  <button type="submit" class="form-control-btn text-white text-uppercase">Anfrage senden</button>
-
-             
-
-
+                  <div class="col-sm-12">
+                      <button type="submit" class="text-white text-uppercase" required>Anfrage senden</button>
+                  </div>
             </div>
           </form>
           </div>
 
           <div class="col-sm">
-              <p class="h2-thin text-uppercase mb-100">Ihre Ansprechpartner</p>
-              <div>
-                <div>
-                  <h3>Storytelling und Visualisierung</h3>
-                  <h4>Sebastian Martin</h4>
-                  <a href="#"><i></i> sebastian@engaging-elements.de</a>
+              <p class="h2-thin text-uppercase mb-100">Ansprechpartner</p>
+              <div class="ansprechpartner p-100">
+                <div class="ansprechpartner-single p-100 pb-300 mb-100">
+                    
+                    <div class="media-body">
+                       <h4 class="pb-100">Storytelling und Visualisierung</h4>
+                      
+                    <h4><span class="text-blue">Sebastian Martin</span></h4>
+                    <a href="#"><i class="fas fa-envelope"></i> sebastian@engaging-elements.de</a>
+                    </div>
+
                 </div>
-                <div>
-                  <h3>Konzepte und innovatives Erklären</h3>
-                  <h4>Erik Wirth</h4>
-                  <a href="#"><i></i> erik@engaging-elements.de</a>
-                  </div>
-              </div>
+                
+                <div class="ansprechpartner-single p-100 pb-300 mb-100">
+                    <div class="media-body">
+                       <h4 class="pb-100">Konzepte und innovatives Erklären</h4>
+                      
+                    <h4><span class="text-blue">Erik Wirth</span></h4>
+                    <a href="#"><i class="fas fa-envelope"></i> erik@engaging-elements.de</a>
+                    </div>
+                   
+                </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm">
-            <h2>Kontakt</h2>
-          </div>
-        </div>  
-        <div class="row">
-          <div class="col-sm-4">
-            <h2>Contact</h2>
-          </div>
-          <div class="col-sm">
-            <p>Maps</p>
-          </div>
-        </div>
-
-      </div>
+      </section>
 
  <!--        <section class="content-particles">
             <div id="particles-js"></div>
@@ -350,16 +348,34 @@
     </main>
 
     <footer>
-      <div class="container-fluid">
+      <div class="container-fluid section-footer mt-300 pt-500">
         <div class="wrapper-1140 mx-auto">
-          <div class="row">
-          <div class="col-sm"><p>Small Text</p></div>
-          <div class="col-sm"><p>What we do Stichpunkte</p></div>
+          <div class="row mb-300">
+          <div class="col-sm media">
+            <img src="/resources/img/2x/ee-logo@2x.png" alt="">
+            <div class="media-body">
+                <p>Engaging Elements ist ein Konzept, mit dessen Hilfe Sie besser komplexe Sachverhalte vermitteln können. Wir führen Sie im Rahmen unseres ausführlichen Trainingsprogramms durch die Schritte, mit denen Sie in Ihrem Unternehmen gewinnbringend zum Kommunikator werden.</p>
+            </div>
+            
+          </div>
+          <div class="col-sm footer-bullets">
+            <p>Kommunikationstrainings</p>
+            <p>Individualtrainings für Unternehmen</p>
+            <p>Coaching und Betreuung</p>
+            <p>Case-by-Case Unterstützung</p>
+            <p>Trainingstermine München, Augsburg, Ulm</p>
+          </div>
           <div class="col-sm"><p>Letztes Updates</p></div>
-          <div class="col-sm"><p>Nochmal Kontaktinfo</p></div>
+          <div class="col-sm">
+            <p>Engaging Elements</p>
+            <p>Sebastian Martin & Erik Wirth</p>
+            <a href="www.engaging-elements.de">www.engaging-elements.de</a>
+            <a href="mailto:hallo@engaging-elements.de">hallo (at) engaging-elements.de</a>
+            <a href="tel:+">Tel: 0176 / 6240 8841</a>
+          </div>
         </div>
-        <div class="row justify-content-between">
-          <div class="col-sm-4"><p>Copyright</p></div>
+        <div class="row justify-content-between text-center footer-secondary">
+          <div class="col-sm-4"><p> &copy; Engaging Elements 2016 - 2018</p></div>
           <div class="col-sm-4"><p>Privacy Links</p></div>
         </div>
       </div>

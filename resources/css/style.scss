@@ -16,6 +16,7 @@ $space-l: 5.2rem;
 
 @import 'header';
 
+
 // Required
 @import "vendors/bootstrap/scss/functions";
 @import "vendors/bootstrap/scss/variables";
@@ -38,6 +39,7 @@ $space-l: 5.2rem;
 
 @import 'typography';
 @import 'siteforms';
+@import 'section-system-content';
 
 * {
     box-sizing: border-box;
@@ -54,13 +56,7 @@ body {
     background: $white;
 }
 
-.site-content {
-    background-color: rgba($color: #000000, $alpha: 0.1); 
-}
 
-.system-content {
-    background-color: $grey-light;
-}
 
 .wrapper-1140 {
     max-width: 1140px;
@@ -202,7 +198,61 @@ body {
     background-color: $grey-light;
 }
 
+.section-contact {
+   & .ansprechpartner {
+        background-color: $grey-light;
+    
+        &-single {
+            background-color: $white;
 
+            & img {
+                float: left;
+                max-width: 25%;
+                overflow: hidden;
+            }
+
+            & .text-blue {
+                color: $main-color;
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+.section-footer {
+    background-color: $grey-dark;
+    color: $grey-light;
+    & p {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    & a {
+        display: inline-block;
+        width: 100%;
+        height: 2.5rem;
+        color: lighten($main-color, 45%);
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+    & .media {
+        & img {
+        max-width: 80%;
+        }
+
+        & p {
+            line-height: 140%;
+        }
+    } 
+
+
+    & .footer-secondary {
+        background-color: darken($grey-dark, 30%);
+        height: 4rem;
+        color: $grey-medium;
+    }
+}
 
 
 
