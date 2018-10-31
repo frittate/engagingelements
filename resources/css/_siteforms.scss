@@ -1,4 +1,12 @@
-.form-request {
+.hide-robot {
+    display: none
+};
+
+#form_field-text{
+    height: 25rem;
+}
+
+.formQuick {
     font-size: 1.4rem;
     border: 1px solid $grey-light;
     border-radius: 2px;
@@ -67,7 +75,9 @@
     input[type=text]:required input[type=email]:valid, {
         background: lightgreen;
     }
+
     input:focus + label,
+    textarea:focus + label,
     input:not(:placeholder-shown) + label {
        transform: translateY(-120%); 
     } 

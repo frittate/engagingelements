@@ -1,0 +1,66 @@
+.section-vorteile {
+    & .moving-box:hover .overlay-box {
+        top: 0;
+        transform: translate(0,0);
+    }
+
+    & .img-box {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        margin: 0;    
+
+        & a {
+            display: block;
+            
+
+            & img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    & .overlay-box {
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: -60px;
+        transform: translate(0,100%);
+        display: block;
+        transition: all 1s ease;
+        
+
+        & h4 {
+            line-height: 60px;
+        }
+    }
+
+    & .inner-box {
+        position: relative; 
+        padding-left: 8rem;
+        padding-right: 2rem;
+        height: 100%;
+    }
+
+    & .icon-box-mover {
+        position: absolute;
+        width: 60px;
+        text-align: center;
+        background: $main-color;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        line-height: 60px;
+        color: $white;
+
+        & i {
+            
+            //line-height: 60px;
+            font-size: 2rem;
+        }
+    }
+}

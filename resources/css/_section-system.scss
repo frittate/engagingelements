@@ -1,0 +1,23 @@
+.section-system {
+    background-color: $grey-light;
+    
+    & .row > :not(:first-child){
+        & p {
+            display: none;
+        }
+        cursor: pointer;
+        transition: all .2s ease;
+    }
+
+    & .row > :not(:first-child):hover {
+         background-color: $main-color;
+         & h4 {
+            color: $white;
+         }
+
+         & p {
+             color: $white;
+             display: inline;
+         }
+     }
+}

@@ -1,0 +1,16 @@
+.section-questions {
+    & .media {
+        background: $grey-light;
+        padding: 1.5rem;
+    }
+
+    & .nutzerbild {
+        border-radius: 100%;
+        height: 80px;
+        width: 80px;
+    }
+
+    & .span-name, .span-function {
+        color: $grey-medium;
+    }
+}
