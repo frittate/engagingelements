@@ -8,12 +8,12 @@
 
 .formQuick {
     font-size: 1.4rem;
-    border: 1px solid $grey-light;
+    border: 2px solid #FF4B2B;
     border-radius: 2px;
 
     &_upper {
         height: 20rem;
-        background-color: $main-color;
+        background: linear-gradient(to top, $contrast-color, #FF416C);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,7 +26,15 @@
 
     &_lower {
         padding: 3rem;
+        border: 2px solid #FF4B2B;
+    }
 
+    & #upper-button {
+        background: #FF4B2B;
+
+        &:hover {
+            background: #FF416C;
+        }
     }
 }
 

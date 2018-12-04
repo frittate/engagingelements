@@ -1,4 +1,4 @@
-particlesJS.load('particles-js', '../../vendors/js/particlesjs-config.json', function() {
+particlesJS.load('particles-js', './vendors/js/particlesjs-config.json', function() {
     
   }); 
   /*
@@ -7,7 +7,7 @@ particlesJS.load('particles-js', '../../vendors/js/particlesjs-config.json', fun
     console.log('callback - particles.js 2 config loaded');
   }); */
 
-  $(document).ready(function(){
+$(document).ready(function(){
     let mobileNav = false;
 
     $('#nav-burger').click(function() {
@@ -43,6 +43,7 @@ particlesJS.load('particles-js', '../../vendors/js/particlesjs-config.json', fun
           $(formMessages).addClass('success');
 
           $(formMessages).text(response);
+          $('#lower-button').html(response);
 
           $('#form_field-name').val('');
           $('#form_field-mail').val('');
@@ -62,13 +63,13 @@ particlesJS.load('particles-js', '../../vendors/js/particlesjs-config.json', fun
 
       //Formular Quick-Anfrage
    
-      var formQuick = $('ajax-contact-quick');
+      var formQuick = $('#ajax-contact-quick');
       var formQuickMessages = $('#formQuick-messages');
 
       $(formQuick).submit(function(event) {
         event.preventDefault();
 
-        var formData = $(formQuick).serialize();
+        var formQuickData = $(formQuick).serialize();
 
         $.ajax({
           type: 'POST',

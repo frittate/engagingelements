@@ -6738,7 +6738,7 @@ p, li {
 
 .formQuick {
   font-size: 1.4rem;
-  border: 1px solid #f4f4f4;
+  border: 2px solid #FF4B2B;
   border-radius: 2px;
 }
 
@@ -6764,6 +6764,7 @@ p, li {
 
 .formQuick_lower {
   padding: 3rem;
+  border: 2px solid #FF4B2B;
 }
 
 .formQuick #upper-button {

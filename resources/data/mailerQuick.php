@@ -1,8 +1,9 @@
 <?php 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = strip_tags(trim($_POST["name"]));
+        $name = strip_tags(trim($_POST["formQuick-name"]));
         $name = str_replace(array("\r","\n"),array(" ", " "), $name);
-        $tel = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $tel = preg_replace('/[^0-9]/', '', $_POST["formQuick-tel"]);
+
 
         if (empty($name) OR empty($tel) OR $honeypot > 1) {
             http_response_code(400);
@@ -16,7 +17,7 @@
         $email_content = "Name: $name\n";
         $email_content .= "Telefon: $tel\n\n";
       
-        $email_content .= "Gesendet von mailer.php am $time";
+        $email_content .= "Gesendet von mailerQuick.php am $time";
 
         $email_headers = "From: $name";
 

@@ -8,11 +8,18 @@
 
         if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR $honeypot > 1) {
             http_response_code(400);
-            echo "Ein Problem ist aufgetreten: $name, $message, $email";
-            exit;
+            if (empty($message)) {
+                echo "Bitte geben Sie eine Nachricht ein.";
+                exit;
+            } else {
+                echo "Ein Problem ist aufgetreten: $name, $message, $email";
+                exit;
+            }
+            
         }
 
-        $recipient = "hallo@engaging-elements.de";
+        //$recipient = "hallo@engaging-elements.de";
+        $recipient = "smtp://localhost:1025";
         $subject = "Neue Anfrage von engaging-elements.de, von $name";
         $time = date("d-m-Y") . ' um ' . date("h:i:sa");
         $email_content = "Name: $name\n";
